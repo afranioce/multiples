@@ -16,12 +16,12 @@ class MultipleByThreeTest extends TestCase
 
     public function testSholudBeDivisibleByThree()
     {
-        $this->assertTrue($this->multiple->isDivisible(3));
+        $this->assertTrue($this->multiple->isMultiple(3));
         $this->assertEquals('Linio', $this->multiple->getReplacer());
     }
 
     public function testNotSholudBeDivisibleByThree()
     {
-        $this->assertFalse($this->multiple->isDivisible(5));
+        $this->assertFalse($this->multiple->isMultiple(5));
     }
 }

@@ -16,12 +16,12 @@ class MultipleByFiveTest extends TestCase
 
     public function testSholudBeDivisibleByFive()
     {
-        $this->assertTrue($this->multiple->isDivisible(5));
+        $this->assertTrue($this->multiple->isMultiple(5));
         $this->assertEquals('IT', $this->multiple->getReplacer());
     }
 
     public function testNotSholudBeDivisibleByFive()
     {
-        $this->assertFalse($this->multiple->isDivisible(3));
+        $this->assertFalse($this->multiple->isMultiple(3));
     }
 }

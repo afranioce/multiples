@@ -6,7 +6,7 @@ use App\Multiples\MultipleInterface;
 
 class Three implements MultipleInterface
 {
-    public function isDivisible(int $number): bool
+    public function isMultiple(int $number): bool
     {
         return !($number % 3);
     }

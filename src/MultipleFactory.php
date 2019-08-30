@@ -17,7 +17,7 @@ class MultipleFactory
     public function replace(int $number): string
     {
         foreach ($this->multiples as $multiple) {
-            if ($multiple->isDivisible($number)) {
+            if ($multiple->isMultiple($number)) {
                 return $multiple->getReplacer();
             }
         }
