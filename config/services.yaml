@@ -1,0 +1,20 @@
+services:
+    App\Multiples\ThreeAndFive:
+        tags:
+            - { name: 'multiples' }
+
+    App\Multiples\Five:
+        tags:
+            - { name: 'multiples' }
+
+    App\Multiples\Three:
+        tags:
+            - { name: 'multiples' }
+
+    App\MultipleFactory:
+        # inject all services tagged with app.handler as first argument
+        arguments: [!tagged multiples]
+
+    App\PrintBuilder:
+        # inject all services tagged with app.handler as first argument
+        arguments: App\MultipleFactory
