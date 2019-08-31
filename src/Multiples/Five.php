@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Multiples;
 
 use App\Multiples\MultipleInterface;

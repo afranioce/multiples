@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App;
 
 class MultipleFactory
@@ -21,6 +23,6 @@ class MultipleFactory
                 return $multiple->getReplacer();
             }
         }
-        return $number;
+        return (string)$number;
     }
 }
