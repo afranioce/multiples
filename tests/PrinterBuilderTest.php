@@ -21,7 +21,8 @@ class PrintBuilderTest extends TestCase
         $factory = new MultipleFactory($multiples);
         $printer = new PrinterBuilder($factory);
 
-        $printer->build();
-        echo $printer->show();
+        $printer->build(15);
+
+        $this->assertEquals(['1', '2', 'Linio', '4', 'IT', 'Linio', '7', '8', 'Linio', 'IT', '11', 'Linio', '13', '14', 'Linianos'], $printer->getReplacedNumbers());
     }
 }
