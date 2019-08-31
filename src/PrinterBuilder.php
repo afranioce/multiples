@@ -17,6 +17,11 @@ class PrinterBuilder
         $this->multipleFactory = $multipleFactory;
     }
 
+    public function getReplacedNumbers() : array
+    {
+        return $this->replacedNumbers;
+    }
+
     public function build(int $to = 100, int $from = 1): void
     {
         $numbers = range($from, $to);
